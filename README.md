@@ -1,3 +1,4 @@
+
 # Learn APIs — Full Stack Project (Angular + Spring Boot + MySQL)
 
 A tiny full-stack app to understand how APIs work. You'll build:
@@ -197,6 +198,8 @@ Open `http://localhost:4200`.
 
 The other thing this project teaches that pure "send to DB" wouldn't:
 - Browser DevTools → Network tab. **Always have this open while learning APIs.** Every clicked button, every page load, every form submit — you can see the actual request and response. This is the single most useful habit when learning web development.
-#   D e m o  
- #   L e a r n   a p i   p r o j e c t  
+#   D e m o 
+ 
+ #   L e a r n   a p i   p r o j e c t 
+ 
  
