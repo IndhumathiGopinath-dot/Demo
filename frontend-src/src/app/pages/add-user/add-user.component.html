@@ -1,0 +1,43 @@
+<h1>Add a new user</h1>
+<p class="hint">Open your browser's console (F12) — you'll see the values logged there too.</p>
+
+<form (submit)="onSubmit(); $event.preventDefault()" class="user-form">
+  <label>
+    Name
+    <input
+      type="text"
+      [(ngModel)]="name"
+      name="name"
+      placeholder="e.g. Aman"
+      autocomplete="off"
+    />
+  </label>
+
+  <label>
+    Age
+    <input
+      type="number"
+      [(ngModel)]="age"
+      name="age"
+      placeholder="e.g. 22"
+      min="0"
+    />
+  </label>
+
+  <div class="actions">
+    <button type="submit" [disabled]="status === 'loading'">
+      {{ status === 'loading' ? 'Saving...' : 'Save user' }}
+    </button>
+    <button type="button" class="secondary" (click)="goToList()">
+      View all users →
+    </button>
+  </div>
+</form>
+
+<!-- Status messages -->
+<p *ngIf="status === 'success'" class="msg success">
+  ✓ User saved. Check the console and visit "View Users".
+</p>
+<p *ngIf="status === 'error'" class="msg error">
+  {{ errorMessage }}
+</p>

@@ -1,0 +1,18 @@
+<div class="app-shell">
+  <header class="navbar">
+    <div class="brand">User App</div>
+    <nav>
+      <!--
+        routerLink is Angular's way to navigate without reloading the page.
+        routerLinkActive adds the "active" class when the route matches.
+      -->
+      <a routerLink="/add" routerLinkActive="active">Add User</a>
+      <a routerLink="/users" routerLinkActive="active">View Users</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <!-- The current page (AddUserComponent or UserListComponent) renders here. -->
+    <router-outlet />
+  </main>
+</div>
